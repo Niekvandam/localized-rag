@@ -1,11 +1,7 @@
 # querying.py
 import logging
 from .vectorstore_utils import check_chroma_collection  # Import the helper
-from llama_index.core.retrievers import VectorIndexRetriever
 from llama_index.core.indices import VectorStoreIndex
-from llama_index.core.postprocessor import (
-    PrevNextNodePostprocessor,
-)
 logger = logging.getLogger(__name__)
 
 async def query_llamaindex_rag(index: VectorStoreIndex, query_text):
